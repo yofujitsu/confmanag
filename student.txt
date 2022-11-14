@@ -1,0 +1,45 @@
+{
+    # здесь можно создать переменные
+    subject = "Конфигурационное управление";
+    groups = for(1 35 1 "ИКБО-&-21");
+    student1 = 
+    (
+        age(19)
+        group("ИКБО-16-21")
+        name("Цветков А.С.")
+    );
+    student2 =
+    (
+        age(37)
+        group("ИКБО-13-21")
+        name("Роналду К.А.")
+    );
+    student3 =
+    (
+        age(35)
+        group("ИКБО-3-21")
+        name("Месси Л.А.")
+    );
+    student4 =
+    (
+        age(30)
+        group("ИКБО-20-21")
+        name("Неймар Д.О.")
+    );
+}
+
+(
+    groups(
+            &groups
+          )
+    students(
+            &student1 
+            &student2 
+            &student3
+            &student4
+        (
+            age(18) group("ИКБО-6-21") name("Холланд Э.Г.")
+        )
+    ) 
+subject(&subject)
+)
